@@ -1,0 +1,6 @@
+/* Additional component styles */
+.sidebar { margin-top: 2rem; }
+.widget { background: #fff; border: 1px solid #eee; padding: 1rem; border-radius: 8px; }
+.widget-title { margin: 0 0 .75rem; }
+.search-form input { padding: .5rem; border: 1px solid #ccc; border-radius: 4px; }
+.search-form button { padding: .5rem .75rem; background: #0a4b78; color: #fff; border: none; border-radius: 4px; }
