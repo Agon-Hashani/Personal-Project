@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
+
 
 <main class="landing">
 
