@@ -30,9 +30,9 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 .latest-page a:hover{color:var(--primary)}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700}
 .logo-icon{font-size:22px}
-.nav .menu{list-style:none;margin:0;padding:0;display:flex;gap:24px;align-items:center;list-style-type:none}
-.nav .menu li{margin:0;list-style:none}
-.nav .menu li a{color:#000;text-decoration:none;padding:8px 0;display:inline-block;font-size:14px;transition:color .2s ease,border-color .2s ease;border-bottom:2px solid transparent}
+.nav .menu{list-style:none;margin:0;padding:0;display:flex;gap:24px;align-items:center}
+.nav .menu li{margin:0}
+.nav .menu li a{color:var(--muted);text-decoration:none;padding:8px 0;display:inline-block;font-size:14px;transition:color .2s ease,border-color .2s ease;border-bottom:2px solid transparent}
 .nav .menu li a:hover{color:var(--primary);border-bottom-color:var(--primary)}
 .nav .menu .current_page_item > a, .nav .menu .current-menu-item > a{color:var(--primary);font-weight:600;border-bottom-color:var(--primary)}
 
@@ -96,8 +96,6 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 
 /* Footer */
 footer{padding:18px 0;text-align:center;color:var(--muted);background:transparent}
-/* Ensure footer text is black (override other theme rules) */
-.site-footer, .site-footer p, footer p { color: #000 !important; }
 
 /* Utilities & responsive */
 @media (max-width:1000px){.listings-grid{grid-template-columns:repeat(2,1fr)}.hero{flex-direction:column}.hero-image-wrap img{width:100%}}
