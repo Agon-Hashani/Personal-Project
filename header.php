@@ -8,19 +8,30 @@
 </head>
 <body <?php body_class(); ?>>
 <header class="site-header">
-  <div class="container">
+  <div class="container header-inner">
     <div class="logo">
-      <?php if (has_custom_logo()) { the_custom_logo(); } else { ?>
-        <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-      <?php } ?>
-      <p class="meta"><?php bloginfo('description'); ?></p>
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="logo-link">
+        <span class="logo-icon" aria-hidden="true">🏢</span>
+        <span class="logo-text">RealEstate Listings</span>
+      </a>
     </div>
-    <nav class="primary-nav">
-      <?php wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'menu_class' => 'menu']); ?>
+
+    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+
+    <nav id="site-navigation" class="nav" aria-label="Primary navigation">
+      <?php if ( has_nav_menu('primary') ) :
+        wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'menu', 'menu_id' => 'primary-menu'));
+      else :
+        $exclude = '';
+        $sp = get_page_by_path('sample-page');
+        if ($sp) { $exclude = $sp->ID; }
+        echo '<ul id="primary-menu" class="menu">';
+        wp_list_pages(array('title_li' => '', 'depth' => 1, 'exclude' => $exclude));
+        echo '</ul>';
+      endif; ?>
     </nav>
-    <div class="header-search">
-      <?php get_search_form(); ?>
-    </div>
+
+    <!-- header search removed as requested -->
   </div>
 </header>
 <main class="container">
